@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: grid;
+    gap: 5px;
+    margin: 100px auto;
+    width: 300px;
+    height: 500px;
+    background-image: url('background.png'); /* 新的背景图片 */
+    
+  }
+  
+  .restart:hover {
+    background-color: #555;
+  }
+  
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 315px;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbffd8;
+    border: 6px solid #1a1a1a;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cell[data-symbol="X"] {
+    color: rgb(255, 122, 14);
+  }
+  
+  .cell[data-symbol="O"] {
+    color: rgb(82, 0, 133);
+  }
+  
+  .game-status {
+    margin-bottom: 10px;
+  }
+  
+  .restart {
+    cursor: pointer;
+  }
+  /* 当屏幕宽度小于600像素时，应用这组样式 */
+@media screen and (max-width: 600px) {
+    .game-board {
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+      width: 245px;
+    }
+    .cell {
+      font-size: 20px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  /* 当屏幕宽度大于600像素时，应用这组样式 */
+  @media screen and (min-width: 601px) {
+    .game-board {
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      width: 315px;
+    }
+    .cell {
+      font-size: 24px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  /* 当屏幕宽度小于600像素时，应用这组样式 */
+@media screen and (max-width: 600px) {
+    .game-board {
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+      width: 245px;
+    }
+    .cell {
+      font-size: 20px;
+      width: 80px;
+      height: 80px;
+    }
+    body {
+      background-size: 80%;
+    }
+  }
+  
+  /* 当屏幕宽度大于600像素时，应用这组样式 */
+  @media screen and (min-width: 601px) {
+    .game-board {
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      width: 315px;
+    }
+    .cell {
+      font-size: 24px;
+      width: 100px;
+      height: 100px;
+    }
+    body {
+      background-size: cover;
+    }
+  }
+  .game-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: white; /* 将标题的颜色更改为白色 */
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(1, 0, 34); /* 新的颜色 */
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  
+  
+
+  
